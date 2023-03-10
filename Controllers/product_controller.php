@@ -276,6 +276,7 @@ function oneProduct($id){
 			array_push($array, $entries['prod_description']);
 			array_push($array, $entries['category_name']);
 			array_push($array, $entries['prod_keywords']);
+			array_push($array, $entries['prod_category']);
 		}
 
 		if (empty($array)) {
@@ -426,7 +427,7 @@ function categoryproduct($catid){
 
 $object = new productclass();
 
-$search = $object->categoryproduct($catid);
+$search = $object->catprod($catid);
 
 	if ($search) {
 		
@@ -434,10 +435,10 @@ $search = $object->categoryproduct($catid);
 
 		while ($entries = $object->db_fetch()) {
 			
-			$array[$entries['prod_id']] = [$entries['prod_name'],
+			$array[$entries['prod_id']] = [$entries['prod_id'],
+										  $entries['prod_name'],
 										  $entries['prod_image'],
-										  $entries['prod_price'],
-										  $entries['prod_category']];
+										  $entries['prod_price']];
 		}
 
 		return $array;
