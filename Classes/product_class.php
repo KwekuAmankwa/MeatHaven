@@ -134,4 +134,5 @@ class productclass extends db_connection
 		return $this->db_query($sql);	
 	}
 }
+//Testing sync after renaming repository
 ?>
