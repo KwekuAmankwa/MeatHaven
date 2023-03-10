@@ -65,7 +65,7 @@ $one = oneProduct($prodID);
 			<div class="col-2">
 				<p><a href="meathaven.php">Home </a>/ <?php echo "".$one[1]."" ?></p>
 				<h1><?php echo "".$one[1]."" ?></h1>
-				<p>Category: <a href="#"><?php echo "".$one[4]."" ?></a></p>
+				<p>Category: <a href="catprod.php?id=<?php echo "".$one[6]."" ?>&name=<?php echo "".$one[4]."" ?>"><?php echo "".$one[4]."" ?></a></p>
 				<p>Keywords: <?php echo "".$one[5]."" ?></p><br>
 				<h4>GHS <?php echo "".$one[2]."" ?>.00</h4>
 				<form method="post" action="../Actions/addcart.php">
