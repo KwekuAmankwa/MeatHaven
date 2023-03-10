@@ -78,7 +78,7 @@ class productclass extends db_connection
 	public function oneProduct($id)
 	{
 		#query to retrieve one product 
-		$sql = "SELECT product.prod_id, product.prod_name, category.category_name, product.prod_price, product.prod_image, product.prod_description, product.prod_keywords 
+		$sql = "SELECT product.prod_id, product.prod_name, category.category_name, product.prod_price, product.prod_image, product.prod_description, product.prod_keywords, product.prod_category 
 			FROM product 
 			JOIN category ON (category.category_id = product.prod_category)
 			WHERE `prod_id` = '$id'";
@@ -124,6 +124,14 @@ class productclass extends db_connection
 		$sql = "SELECT * FROM `product` WHERE `prod_category` = '$catid'";
 
 		return $this->db_query($sql);
+	}
+
+	public function catprod($catid){
+		$sql = "SELECT product.prod_id, product.prod_name, category.category_name, product.prod_price, product.prod_image, product.prod_description, product.prod_keywords 
+			FROM product 
+			JOIN category ON (category.category_id = product.prod_category)
+			WHERE prod_category = '$catid'";
+		return $this->db_query($sql);	
 	}
 }
 ?>
