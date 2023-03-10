@@ -87,7 +87,9 @@ $catimages = categoryImage();
 					$key = array_search($catid, $catids);
 			?>
 				<div class="col-3">
-					<a href="catprod.php?id=<?php  echo $catids[$key];?>&name=<?php  echo $catnames[$key];?>"><img src="<?php  echo $catimages[$key];?>"></a><br><br>
+					<a href="catprod.php?id=<?php  echo $catids[$key];?>&name=<?php  echo $catnames[$key];?>">
+						<img src="<?php  echo $catimages[$key];?>">
+					</a><br><br>
 					<h4><?php  echo $catnames[$key];?></h4>
 				</div>
 				<?php		
@@ -109,7 +111,9 @@ $catimages = categoryImage();
 			    $key = array_search($prodid, $prodids);
 		?>	
 			<div class="col-4">
-				<a href="oneproduct.php?id=<?php echo "$prodids[$key]";?>&name=<?php echo"$prodname[$key]";?>"><img src="<?php echo"$prodimage[$key]";?>"></a>
+				<a href="oneproduct.php?id=<?php echo "$prodids[$key]";?>&name=<?php echo"$prodname[$key]";?>">
+					<img src="<?php echo"$prodimage[$key]";?>">
+				</a>
 				<h4><?php echo"$prodname[$key]"; ?></h4>
 				<p>GHS: <?php echo "$prodprice[$key]"; ?>.00</p>
 			</div>
