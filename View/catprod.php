@@ -62,16 +62,16 @@ $cat = $_GET['name'];
 				$category = array();
 				$category = categoryproduct($catid);
 
-				print_r($category);
+				//print_r($category);
 				if ($category) {
 				  foreach ($category as $key => $value) {   
 			?>
 			<div class="col-4">
-				<a href="oneproduct.php?id=<?php echo "".$key."" ?>&name=<?php echo "".$value[0]."" ?>">
-					<img src="<?php echo "".$value[1].""; ?>">
+				<a href="oneproduct.php?id=<?php echo "".$value[0]."" ?>&name=<?php echo "".$value[1]."" ?>">
+					<img src="<?php echo "".$value[2].""; ?>">
 				</a>
-				<h4><?php echo "".$value[0]."" ?> </h4>
-				<p>GHS: <?php echo "".$value[2]."" ?>.00</p>
+				<h4><?php echo "".$value[1]."" ?> </h4>
+				<p>GHS: <?php echo "".$value[3]."" ?>.00</p>
 			</div>
 			<?php
 
