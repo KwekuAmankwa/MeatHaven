@@ -44,7 +44,7 @@ function Customer($email,$password){
 		
 		$array = array();
 
-		while ($entries = $array->db_fetch()) {
+		while ($entries = $object->db_fetch()) {
 			array_push($array, $entries['customer_id']);
 			array_push($array, $entries['customer_email']);
 			array_push($array, $entries['customer_password']);
